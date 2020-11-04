@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  mysql:
+    build : ./AppMySQL
+    container_name: App_MySQL
+    volumes:
+      - ./AppMySQL/:/AppMySQL
+    ports:
+      - "3306:3306"
+    #command: mysql -u root -pinsofe cust_db < cust_data.dump
+
+  
